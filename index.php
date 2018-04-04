@@ -30,6 +30,24 @@ echo $user;
 
 //Carrega um usuario usando logine a senha
 
+//$usuario = new Usuario();
+//$usuario->login("root","1234");
+//echo $usuario;
+/*
+//Insert de usuario novo
+$aluno = new Usuario("Silas", "asdf");
+
+$aluno->insert();
+
+echo  $aluno;
+*/
+
+//Atualizando um usuario
+
 $usuario = new Usuario();
-$usuario->login("root","1234");
+
+$usuario->loadById(5);
+
+$usuario->update("professor","4321");
+
 echo $usuario;
